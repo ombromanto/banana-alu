@@ -53,14 +53,69 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
-    <comp lib="0" loc="(80,120)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
   </circuit>
   <circuit name="realAlu">
     <a name="circuit" val="realAlu"/>
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
+  </circuit>
+  <circuit name="AND">
+    <a name="circuit" val="AND"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(280,150)" to="(340,150)"/>
+    <wire from="(140,170)" to="(230,170)"/>
+    <wire from="(140,130)" to="(230,130)"/>
+    <comp lib="0" loc="(340,150)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(140,170)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="B"/>
+    </comp>
+    <comp lib="0" loc="(140,130)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="A"/>
+    </comp>
+    <comp lib="1" loc="(280,150)" name="AND Gate">
+      <a name="width" val="8"/>
+      <a name="inputs" val="2"/>
+    </comp>
+  </circuit>
+  <circuit name="OR">
+    <a name="circuit" val="OR"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(150,170)" to="(250,170)"/>
+    <wire from="(150,210)" to="(250,210)"/>
+    <wire from="(300,190)" to="(370,190)"/>
+    <comp lib="0" loc="(370,190)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(150,170)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="A"/>
+    </comp>
+    <comp lib="0" loc="(150,210)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="B"/>
+    </comp>
+    <comp lib="1" loc="(300,190)" name="OR Gate">
+      <a name="width" val="8"/>
+      <a name="inputs" val="2"/>
+    </comp>
   </circuit>
 </project>
